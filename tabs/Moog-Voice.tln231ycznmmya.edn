@@ -1,0 +1,158 @@
+{:draft-argument "0.01 * Gen:Noise(0.499d) Gen:Phasor(0.1) * 0.2 1"
+ :identifier "Moog-Voice"
+ :identity "tln231ycznmmya"
+ :patch
+{:cables
+{["2xb4qwu2jfmp3wl" 0] [:fixed "t8ljq677y9ixxyf" 0]
+ ["2xb4qwu2jfmp3wl" 1] [:fixed "tt7efidup707bnt" 0]
+ ["6ui662e5uisrnse" 1] [:fixed "pw9g67ep75qy491" 1]
+ ["83x4omddgnxfdpb" 0] [:fixed "8h3ledn94kp2t2n" 0]
+ ["8h3ledn94kp2t2n" 0] [:fixed "dqfmcb6bb9uqsc" 0]
+ ["9pyr753sjbatldq" 0] [:fixed "wzv3707hxbu96zv" 0]
+ ["bwxdaavfd1en7yb" 0] [:fixed "83x4omddgnxfdpb" 0]
+ ["dqfmcb6bb9uqsc" 0] [:fixed "pw9g67ep75qy491" 1]
+ ["gvyck0bo49cif1u" 0] [:fixed "9pyr753sjbatldq" 0]
+ ["t8ljq677y9ixxyf" 0] [:fixed "pw9g67ep75qy491" 0]
+ ["tt7efidup707bnt" 0] [:fixed "9pyr753sjbatldq" 0]
+ ["tt7efidup707bnt" 1] [:fixed "pw9g67ep75qy491" 2]
+ ["tt7efidup707bnt" 2] [:fixed "bwxdaavfd1en7yb" 0]
+ ["wzv3707hxbu96zv" 0] [:fixed "4s0bmq25we7q41q" 0]
+ ["wzv3707hxbu96zv" 1] [:fixed "6ui662e5uisrnse" 0]
+ ["wzv3707hxbu96zv" 2] [:fixed "2xb4qwu2jfmp3wl" 0]}
+ :nodes
+{"2xb4qwu2jfmp3wl" 
+{:color 2
+ :inputs ["a" "b" "more..."]
+ :label "-"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "-" [:free-var "b"] [:free-var "more..."]]
+ :pos [38 60]
+ }
+ "4s0bmq25we7q41q" 
+{:color 3
+ :inputs []
+ :label "#4"
+ :outputs [""]
+ :parsed [:invariant "4"]
+ :pos [-102 161]
+ }
+ "6ui662e5uisrnse" 
+{:color 3
+ :inputs ["sig" "fc"]
+ :label "Filter-Stage($sig $fc)"
+ :outputs [""]
+ :parsed [:fn "Filter-Stage" [:tuple [:free-var "sig"] [:free-var "fc"]]]
+ :pos [-173 88]
+ }
+ "83x4omddgnxfdpb" 
+{:color 4
+ :inputs ["a"]
+ :label "* 1.36"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:float "1.36"]]
+ :pos [103 -131]
+ }
+ "8h3ledn94kp2t2n" 
+{:color 4
+ :inputs ["b"]
+ :label "1 -"
+ :outputs [""]
+ :parsed [:infix [:float "1"] "-" [:free-var "b"]]
+ :pos [-44 -131]
+ }
+ "9podkn51abuc6g1" 
+{:color 4
+ :inputs []
+ :label ";resonance tuning"
+ :outputs []
+ :parsed [:comment "resonance tuning"]
+ :pos [31 -77]
+ }
+ "9pyr753sjbatldq" 
+{:color 2
+ :inputs ["sig~"]
+ :label "z-1($sig~)"
+ :outputs [""]
+ :parsed [:fn "z-1" [:tuple [:free-var "sig~"]]]
+ :pos [188 161]
+ }
+ "bwxdaavfd1en7yb" 
+{:color 4
+ :inputs ["a"]
+ :label "Math:Exp($a)"
+ :outputs [""]
+ :parsed [:fn "Math:Exp" [:tuple [:free-var "a"]]]
+ :pos [250 -131]
+ }
+ "dqfmcb6bb9uqsc" 
+{:color 4
+ :inputs ["a"]
+ :label "* 1.5"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:float "1.5"]]
+ :pos [-191 -131]
+ }
+ "gvyck0bo49cif1u" 
+{:inputs ["out"]
+ :label "$out"
+ :outputs [""]
+ :parsed [:free-var "out"]
+ :pos [290 303]
+ }
+ "lwifmdsib22tfrd" 
+{:color 3
+ :inputs []
+ :label ";`Iterate` cascades 4 copies of `Filter-Stage` in series."
+ :outputs []
+ :parsed [:comment "`Iterate` cascades 4 copies of `Filter-Stage` in series."]
+ :pos [-111 225]
+ }
+ "pw9g67ep75qy491" 
+{:inputs []
+ :label "(freq cutoff res) = arg"
+ :outputs ["freq" "cutoff" "res"]
+ :parsed "arg"
+ :pos [-349 -44]
+ }
+ "t8ljq677y9ixxyf" 
+{:inputs ["freq"]
+ :label "DPW($freq)"
+ :name "oscillator"
+ :outputs [""]
+ :parsed [:fn "DPW" [:tuple [:free-var "freq"]]]
+ :pos [-146 -50]
+ }
+ "t9d8s16r29xlcqm" 
+{:inputs []
+ :label ";# Moog VCF #\n\n\nThis is a simple model of a sawtooth oscillator fed into the 4th order ladder filter popularized by the MiniMoog."
+ :outputs []
+ :parsed [:comment "# Moog VCF #\n\n\nThis is a simple model of a sawtooth oscillator fed into the 4th order ladder filter popularized by the MiniMoog."]
+ :pos [19 -316]
+ }
+ "tt7efidup707bnt" 
+{:color 2
+ :ephemeral-inputs #{"more2"}
+ :inputs ["a" "b" "more2" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more2"] [:free-var "more..."]]
+ :pos [311 161]
+ }
+ "ww766gd2vd7xwf" 
+{:color 2
+ :inputs []
+ :label ";Resonance is produced by an inverted feedback loop around the ladder structure."
+ :outputs []
+ :parsed [:comment "Resonance is produced by an inverted feedback loop around the ladder structure."]
+ :pos [339 5]
+ }
+ "wzv3707hxbu96zv" 
+{:color 3
+ :inputs ["n" "func" "x"]
+ :label "Algorithm:Iterate($n $func $x)"
+ :outputs [""]
+ :parsed [:fn "Algorithm:Iterate" [:tuple [:free-var "n"] [:free-var "func"] [:free-var "x"]]]
+ :pos [46 161]
+ }}
+ :scale 1
+ :scroll [0 0]}}

@@ -1,0 +1,64 @@
+{:draft-argument "Gen:Saw-(0.25) * 4 1"
+ :identifier "Filter-Stage"
+ :identity "lph4btu7iefxb8v"
+ :patch
+{:cables
+{["2w41szeb3a07cww" 0] [:fixed "7ruz4zjzd7sd16g" 0]
+ ["4fgiqgt8b6ssp7y" 0] [:fixed "2w41szeb3a07cww" 0]
+ ["7ruz4zjzd7sd16g" 0] [:fixed "nze9y1q59x007yy" 1]
+ ["7ruz4zjzd7sd16g" 1] [:fixed "4fgiqgt8b6ssp7y" 0]
+ ["7ruz4zjzd7sd16g" 2] [:fixed "nze9y1q59x007yy" 0]
+ ["uhr3g8cfxr98lzc" 0] [:fixed "2w41szeb3a07cww" 0]}
+ :nodes
+{"2f8y72iav303twj" 
+{:inputs []
+ :label ";# Filter Stage #\n\n\nThis first-order IIR filter combines soft saturation into the feedback loop to simulate analog saturation."
+ :outputs []
+ :parsed [:comment "# Filter Stage #\n\n\nThis first-order IIR filter combines soft saturation into the feedback loop to simulate analog saturation."]
+ :pos [-12 -246]
+ }
+ "2w41szeb3a07cww" 
+{:inputs ["w"]
+ :label "Approx:Tanh($w)"
+ :outputs [""]
+ :parsed [:fn "Approx:Tanh" [:tuple [:free-var "w"]]]
+ :pos [4 76]
+ }
+ "4fgiqgt8b6ssp7y" 
+{:inputs ["sig~"]
+ :label "z-1($sig~)"
+ :outputs [""]
+ :parsed [:fn "z-1" [:tuple [:free-var "sig~"]]]
+ :pos [135 41]
+ }
+ "50cv7xuc27fgcwu" 
+{:inputs []
+ :label ";The filter signal is a `Mix` of input and previous output. The mixing ratio determines the cutoff frequency."
+ :outputs []
+ :parsed [:comment "The filter signal is a `Mix` of input and previous output. The mixing ratio determines the cutoff frequency."]
+ :pos [-112 147]
+ :selected true}
+ "7ruz4zjzd7sd16g" 
+{:inputs ["mix" "a" "b"]
+ :label "Math:Mix($mix $a $b)"
+ :outputs [""]
+ :parsed [:fn "Math:Mix" [:tuple [:free-var "mix"] [:free-var "a"] [:free-var "b"]]]
+ :pos [-112 1]
+ }
+ "nze9y1q59x007yy" 
+{:inputs []
+ :label "(sig fc) = arg"
+ :outputs ["sig" "fc"]
+ :parsed "arg"
+ :pos [-241 -26]
+ }
+ "uhr3g8cfxr98lzc" 
+{:inputs ["sig"]
+ :label "o))"
+ :name "show Tanh shape"
+ :outputs ["thru"]
+ :parsed [:playback [:free-var "sig"]]
+ :pos [190 132]
+ }}
+ :scale 1
+ :scroll [0 0]}}

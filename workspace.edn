@@ -1,0 +1,14 @@
+{:assets 
+{"assets/82986__tim-kahn__countdown.wav" :bundled}
+ :current-tab 3
+ :file "mooger.veneer"
+ :manifest 
+{:dependencies 
+{}
+ :description "Material for the virtual analog basics workshop"
+ :license "https://www.eclipse.org/legal/epl-v10.html"
+ :name "2020-Workshop-4"
+ :url "https://kronoslang.io"
+ :version "0.1"}
+ :name "2020-workshop-4"
+ :tabs ("tabs/DPW.initial.edn" "tabs/Filter-Stage.lph4btu7iefxb8v.edn" "tabs/Moog-Voice.tln231ycznmmya.edn" "tabs/draft.h8dt7o7x5fiap3j.edn")}

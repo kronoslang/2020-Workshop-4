@@ -1,0 +1,163 @@
+{:documentation "Bandlimited sawtooth synthesis with the differentiated parabolic wave."
+ :draft-argument "8000 * Gen:Phasor(0.2)"
+ :export 
+{:arguments 
+{"freq" 
+{:default-value "220"
+ :max-value "2200"
+ :min-value "22"
+ :signal-type "control"}}}
+ :identifier "DPW"
+ :identity "initial"
+ :patch
+{:cables
+{["001yyf3bu6z97mp" 0] [:fixed "wkl67z4oj2sc76z" 0]
+ ["001yyf3bu6z97mp" 1] [:fixed "cgoxw59oe2rsb41" 0]
+ ["2n0arqteqf9zc72" 0] [:fixed "my0uui8n4vngm4w" 0]
+ ["8efjhxkikf6zggt" 0] [:fixed "94tbtj4jvnqm6wo" 0]
+ ["8efjhxkikf6zggt" 1] [:fixed "eofmrh42nncy9ya" 0]
+ ["8t2xl853dsaq7uz" 0] [:fixed "e5bx3j1mi8li49m" 0]
+ ["94tbtj4jvnqm6wo" 0] [:fixed "hk1kxbzfa4mqzf6" 0]
+ ["cgoxw59oe2rsb41" 0] [:fixed "wkl67z4oj2sc76z" 0]
+ ["e5bx3j1mi8li49m" 0] [:fixed "prt82q36ucvp13v" 0]
+ ["eae4sdhq4knddkr" 0] [:fixed "001yyf3bu6z97mp" 0]
+ ["eae4sdhq4knddkr" 1] [:fixed "8t2xl853dsaq7uz" 0]
+ ["eofmrh42nncy9ya" 0] [:fixed "xk4w4dxcfln2pe3" 0]
+ ["hk1kxbzfa4mqzf6" 0] [:fixed "jp4myzwo5trd38v" 0]
+ ["my0uui8n4vngm4w" 0] [:fixed "xk4w4dxcfln2pe3" 0]
+ ["prt82q36ucvp13v" 0] [:fixed "8efjhxkikf6zggt" 0]
+ ["wkl67z4oj2sc76z" 0] [:fixed "2n0arqteqf9zc72" 0]
+ ["wkl67z4oj2sc76z" 1] [:fixed "2n0arqteqf9zc72" 0]
+ ["xk4w4dxcfln2pe3" 0] [:fixed "jp4myzwo5trd38v" 0]}
+ :nodes
+{"001yyf3bu6z97mp" 
+{:flip-y true
+ :inputs ["a" "b" "more..."]
+ :label "-"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "-" [:free-var "b"] [:free-var "more..."]]
+ :pos [313 41]
+ }
+ "2n0arqteqf9zc72" 
+{:inputs ["a"]
+ :label "- 1"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "-" [:float "1"]]
+ :pos [57 38]
+ }
+ "8efjhxkikf6zggt" 
+{:color 3
+ :inputs ["a" "b" "more..."]
+ :label "/"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
+ :pos [-63 215]
+ }
+ "8t2xl853dsaq7uz" 
+{:color 3
+ :inputs ["a"]
+ :label "Abs($a)"
+ :outputs [""]
+ :parsed [:fn "Abs" [:tuple [:free-var "a"]]]
+ :pos [278 215]
+ }
+ "94tbtj4jvnqm6wo" 
+{:color 3
+ :inputs ["a"]
+ :label "* Math:Pi"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" "Math:Pi"]
+ :pos [-177 215]
+ }
+ "cgoxw59oe2rsb41" 
+{:inputs ["sig~"]
+ :label "z-1($sig~)"
+ :outputs [""]
+ :parsed [:fn "z-1" [:tuple [:free-var "sig~"]]]
+ :pos [246 126]
+ }
+ "e5bx3j1mi8li49m" 
+{:color 3
+ :inputs ["b"]
+ :label "1 -"
+ :outputs [""]
+ :parsed [:infix [:float "1"] "-" [:free-var "b"]]
+ :pos [164 215]
+ }
+ "eae4sdhq4knddkr" 
+{:flip-y true
+ :inputs ["a" "b" "more..."]
+ :label "/"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
+ :pos [401 126]
+ }
+ "eofmrh42nncy9ya" 
+{:color 3
+ :inputs ["sig"]
+ :label "Rate-of($sig)"
+ :outputs [""]
+ :parsed [:fn "Rate-of" [:tuple [:free-var "sig"]]]
+ :pos [-244 126]
+ }
+ "hk1kxbzfa4mqzf6" 
+{:color 3
+ :inputs ["a"]
+ :label "* 2"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:float "2"]]
+ :pos [-291 215]
+ }
+ "ibe14ruzak7hz91" 
+{:inputs []
+ :label ";# Differentiated Parabolic Wave #\n\n\nThis bandlimited virtual analog oscillator samples a continuous *parabolic wave*, which is the *integral* of the sawtooth wave.\n\n\nDue to steeper harmonic rolloff, less aliasing is produced. The desired sawtooth waveshape is reclaimed in the digital domain via discrete differentiation (summing with unit delay in antiphase)."
+ :outputs []
+ :parsed [:comment "# Differentiated Parabolic Wave #\n\n\nThis bandlimited virtual analog oscillator samples a continuous *parabolic wave*, which is the *integral* of the sawtooth wave.\n\n\nDue to steeper harmonic rolloff, less aliasing is produced. The desired sawtooth waveshape is reclaimed in the digital domain via discrete differentiation (summing with unit delay in antiphase)."]
+ :pos [-303 -344]
+ }
+ "jp4myzwo5trd38v" 
+{:inputs []
+ :label "freq = arg"
+ :outputs ["freq"]
+ :parsed "arg"
+ :pos [-436 126]
+ }
+ "my0uui8n4vngm4w" 
+{:inputs ["a"]
+ :label "* 2"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:float "2"]]
+ :pos [-59 38]
+ }
+ "prt82q36ucvp13v" 
+{:color 3
+ :inputs ["angle"]
+ :label "Complex:Unitary($angle)"
+ :outputs [""]
+ :parsed [:fn "Complex:Unitary" [:tuple [:free-var "angle"]]]
+ :pos [51 215]
+ }
+ "v6ha4p9sf3gebbb" 
+{:color 3
+ :inputs []
+ :label "; To maintain `f0` at a steady level, we normalize with regard to the magnitude response of the discrete differentiator."
+ :outputs []
+ :parsed [:comment "To maintain `f0` at a steady level, we normalize with regard to the magnitude response of the discrete differentiator."]
+ :pos [18 275]
+ }
+ "wkl67z4oj2sc76z" 
+{:inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [167 73]
+ }
+ "xk4w4dxcfln2pe3" 
+{:inputs ["freq"]
+ :label "Gen:Phasor($freq)"
+ :outputs [""]
+ :parsed [:fn "Gen:Phasor" [:tuple [:free-var "freq"]]]
+ :pos [-282 38]
+ }}
+ :scale 1
+ :scroll [0 0]}}
