@@ -1,7 +1,7 @@
 {:assets 
 {"assets/82986__tim-kahn__countdown.wav" :bundled}
  :current-tab 3
- :file "mooger.veneer"
+ 
  :manifest 
 {:dependencies 
 {}

@@ -30,11 +30,11 @@ neae4sdhq4knddkr-0
 }
 
 Filter-Stage(sig fc) {
-(nuhr3g8cfxr98lzc-0) = n2w41szeb3a07cww-0
-(n4fgiqgt8b6ssp7y-0) = z-1(n2w41szeb3a07cww-0)
 (n2w41szeb3a07cww-0) = Approx:Tanh(n7ruz4zjzd7sd16g-0)
+(n4fgiqgt8b6ssp7y-0) = z-1(n2w41szeb3a07cww-0)
 (n7ruz4zjzd7sd16g-0) = Math:Mix(nnze9y1q59x007yy-1 n4fgiqgt8b6ssp7y-0 nnze9y1q59x007yy-0)
 (nnze9y1q59x007yy-0 nnze9y1q59x007yy-1) = arg
+(nuhr3g8cfxr98lzc-0) = n2w41szeb3a07cww-0
 nuhr3g8cfxr98lzc-0
 }
 

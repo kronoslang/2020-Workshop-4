@@ -2,7 +2,7 @@
   "dependencies": {},
   "description": "Material for the virtual analog basics workshop",
   "license": "https://www.eclipse.org/legal/epl-v10.html",
-  "version": "0.1",
   "name": "2020-Workshop-4",
-  "url": "https://kronoslang.io"
+  "url": "https://kronoslang.io",
+  "version": "0.1"
 }
