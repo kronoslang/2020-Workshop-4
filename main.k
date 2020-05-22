@@ -3,7 +3,7 @@
 
 
 
-Package 2020-Workshop-4 {
+Package P2020-Workshop-4 {
 
 Brief() { 
 ;; Material for the virtual analog basics workshop
